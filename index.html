@@ -29,7 +29,8 @@
     <script>
         async function loadStats() {
             try {
-                const response = await fetch('data/stats.json');
+                // Add timestamp to prevent caching
+                const response = await fetch(`data/stats.json?t=${new Date().getTime()}`);
                 const data = await response.json();
                 const leaderboard = document.getElementById('leaderboard');
                 leaderboard.innerHTML = '';
