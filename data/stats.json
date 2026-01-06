@@ -4,7 +4,7 @@
     "current": 348,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-06 14:51 UTC",
+    "last_updated": "2026-01-06 15:27 UTC",
     "week_solved": 11,
     "week_breakdown": {
       "Easy": 1,
@@ -27,31 +27,32 @@
   },
   "pdwang96": {
     "baseline": 555,
-    "current": 552,
+    "current": 553,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-06 14:51 UTC",
-    "week_solved": 1,
+    "last_updated": "2026-01-06 15:27 UTC",
+    "week_solved": 2,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 1,
+      "Medium": 2,
       "Hard": 0
     },
     "solved_problems": {
-      "447": "Medium"
+      "447": "Medium",
+      "456": "Medium"
     }
   },
   "user9993g": {
     "baseline": 5,
-    "current": 659,
+    "current": 660,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-06 14:27 UTC",
-    "week_solved": 10,
+    "last_updated": "2026-01-06 15:27 UTC",
+    "week_solved": 11,
     "week_breakdown": {
       "Easy": 1,
       "Medium": 7,
-      "Hard": 2
+      "Hard": 3
     },
     "solved_problems": {
       "227": "Medium",
@@ -63,7 +64,8 @@
       "1249": "Medium",
       "1190": "Medium",
       "1614": "Easy",
-      "726": "Hard"
+      "726": "Hard",
+      "1106": "Hard"
     }
   },
   "scorego": {
@@ -71,7 +73,7 @@
     "current": 504,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-06 14:51 UTC",
+    "last_updated": "2026-01-06 15:27 UTC",
     "week_solved": 5,
     "week_breakdown": {
       "Easy": 0,
