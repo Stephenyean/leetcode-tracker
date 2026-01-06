@@ -39,6 +39,7 @@ def get_leetcode_stats(username, region="CN"):
         submitTime
         question {
           questionFrontendId
+          difficulty
         }
       }
     }
@@ -104,7 +105,7 @@ def get_leetcode_stats(username, region="CN"):
                     print(f"Calculated {week_solved_count} unique problems solved since {start_of_week}")
 
             print(f"Successfully fetched {username} from {LEETCODE_COM_URL}")
-            return {"total_ac": total_ac, "week_solved": week_solved_count}
+            return {"total_ac": total_ac, "week_solved": week_solved_count, "week_breakdown": None}
 
         except Exception as e:
             print(f"Error fetching {username} from {LEETCODE_COM_URL}: {e}")
@@ -127,6 +128,8 @@ def get_leetcode_stats(username, region="CN"):
             
             # 2. Fetch Recent Submissions for Weekly Count
             week_solved_count = 0
+            week_breakdown = {"Easy": 0, "Medium": 0, "Hard": 0}
+            
             response_recent = requests.post(LEETCODE_CN_URL, json={'query': query_cn_recent, 'variables': {"userSlug": username}}, headers=headers, timeout=10)
             if response_recent.status_code == 200:
                 data_recent = response_recent.json()
@@ -141,15 +144,21 @@ def get_leetcode_stats(username, region="CN"):
                     
                     # Filter submissions
                     solved_questions = set()
+                    
                     for sub in submissions:
                         if sub['submitTime'] >= start_ts and sub['status'] == 'A_10':
-                            solved_questions.add(sub['question']['questionFrontendId'])
+                            q_id = sub['question']['questionFrontendId']
+                            if q_id not in solved_questions:
+                                solved_questions.add(q_id)
+                                diff = sub['question']['difficulty'] # "Easy", "Medium", "Hard"
+                                if diff in week_breakdown:
+                                    week_breakdown[diff] += 1
                     
                     week_solved_count = len(solved_questions)
                     print(f"Calculated {week_solved_count} unique problems solved since {start_of_week}")
 
             print(f"Successfully fetched {username} from {LEETCODE_CN_URL}")
-            return {"total_ac": total_ac, "week_solved": week_solved_count}
+            return {"total_ac": total_ac, "week_solved": week_solved_count, "week_breakdown": week_breakdown}
 
         except Exception as e:
             print(f"Error fetching {username} from {LEETCODE_CN_URL}: {e}")
@@ -184,7 +193,8 @@ def main():
             continue
             
         current_total = result["total_ac"]
-        week_solved = result["week_solved"] # Precise count from recent submissions
+        week_solved = result["week_solved"]
+        week_breakdown = result.get("week_breakdown")
 
         if username not in all_stats:
             all_stats[username] = {
@@ -198,9 +208,6 @@ def main():
         if all_stats[username].get("week") != current_iso_week:
             # Archive previous week logic...
             previous_week = all_stats[username].get("week")
-            # If we had a precise count last week, we could use that, but 'baseline' diff is safer for archiving
-            # unless we stored 'week_solved' in the state. 
-            # For simplicity, we stick to baseline diff for archiving, but use week_solved for display.
             previous_baseline = all_stats[username].get("baseline", 0)
             previous_current = all_stats[username].get("current", 0)
             solved_count = previous_current - previous_baseline
@@ -224,6 +231,9 @@ def main():
         else:
              # Fallback for .com or errors
              all_stats[username]["week_solved"] = current_total - all_stats[username]["baseline"]
+             
+        if week_breakdown:
+            all_stats[username]["week_breakdown"] = week_breakdown
 
     with open(stats_file, 'w') as f:
         json.dump(all_stats, f, indent=2)

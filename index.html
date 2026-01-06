@@ -7,26 +7,58 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f8f9fa; }
-        .card { border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card { border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
         .progress { height: 25px; border-radius: 12px; }
         .username { font-weight: bold; font-size: 1.2rem; }
+        .rank-badge { font-size: 1.5rem; margin-right: 10px; }
+        .diff-badge { font-size: 0.75rem; margin-right: 5px; opacity: 0.9; }
     </style>
 </head>
 <body>
     <div class="container py-5">
         <div class="text-center mb-5">
-            <h1 class="display-4">LeetCode Weekly Progress</h1>
+            <h1 class="display-4">LeetCode Weekly Challenge</h1>
             <p class="lead">Goal: 20 problems per week</p>
+            
+            <div class="card d-inline-block px-4 py-2 mb-3 bg-white">
+                <div class="small text-muted text-uppercase fw-bold">Time Remaining</div>
+                <div id="countdown" class="h4 mb-0 text-primary">--d --h --m</div>
+            </div>
+
             <div id="last-updated" class="text-muted small"></div>
         </div>
 
         <div id="leaderboard" class="row justify-content-center">
-            <!-- Stats will be injected here -->
             <div class="text-center">Loading progress...</div>
         </div>
     </div>
 
     <script>
+        function updateCountdown() {
+            const now = new Date();
+            // Calculate next Monday 00:00 UTC (which is Sunday night for many)
+            // Adjust to your preferred deadline. Here we assume Monday 00:00 UTC is the reset.
+            const nextMonday = new Date();
+            nextMonday.setUTCDate(now.getUTCDate() + (7 - now.getUTCDay()) % 7 + (now.getUTCDay() === 1 && now.getUTCHours() < 24 ? 0 : 7)); 
+            nextMonday.setUTCHours(0, 0, 0, 0);
+            
+            // If today is Monday, target IS today 00:00 (which passed), so add 7 days
+            if (nextMonday <= now) {
+                nextMonday.setUTCDate(nextMonday.getUTCDate() + 7);
+            }
+
+            const diff = nextMonday - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById('countdown').innerText = `${days}d ${hours}h ${minutes}m`;
+        }
+        
+        setInterval(updateCountdown, 60000);
+        updateCountdown();
+
         async function loadStats() {
             try {
                 // Add timestamp to prevent caching
@@ -37,24 +69,50 @@
 
                 let lastUpdated = '';
 
-                Object.entries(data).forEach(([username, stats]) => {
-                    // Use precise week_solved if available, otherwise fallback to baseline diff
-                    const solved = (stats.week_solved !== undefined) 
-                        ? stats.week_solved 
-                        : (stats.current - stats.baseline);
-                        
+                // Convert to array and sort
+                const sortedUsers = Object.entries(data)
+                    .map(([username, stats]) => {
+                        const solved = (stats.week_solved !== undefined) 
+                            ? stats.week_solved 
+                            : (stats.current - stats.baseline);
+                        return { username, stats, solved };
+                    })
+                    .sort((a, b) => b.solved - a.solved);
+
+                sortedUsers.forEach(({username, stats, solved}, index) => {
                     const goal = 20;
                     const percentage = Math.min(Math.round((solved / goal) * 100), 100);
                     const color = percentage >= 100 ? 'bg-success' : (percentage > 50 ? 'bg-info' : 'bg-warning');
                     
                     lastUpdated = stats.last_updated;
 
+                    // Rank Medals
+                    let rank = `<span class="badge bg-secondary rounded-pill me-2">#${index + 1}</span>`;
+                    if (index === 0) rank = '🥇';
+                    if (index === 1) rank = '🥈';
+                    if (index === 2) rank = '🥉';
+
+                    // Difficulty Badges
+                    let difficultyHtml = '';
+                    if (stats.week_breakdown) {
+                        const { Easy, Medium, Hard } = stats.week_breakdown;
+                        if (Easy > 0) difficultyHtml += `<span class="badge rounded-pill bg-success diff-badge">Easy: ${Easy}</span>`;
+                        if (Medium > 0) difficultyHtml += `<span class="badge rounded-pill bg-warning text-dark diff-badge">Med: ${Medium}</span>`;
+                        if (Hard > 0) difficultyHtml += `<span class="badge rounded-pill bg-danger diff-badge">Hard: ${Hard}</span>`;
+                    }
+
                     const card = `
                         <div class="col-md-8 mb-4">
                             <div class="card p-4">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="username">${username}</span>
-                                    <span class="badge bg-dark">${solved} / ${goal} Solved (Current Week)</span>
+                                    <div class="d-flex align-items-center">
+                                        <span class="rank-badge">${rank}</span>
+                                        <div>
+                                            <span class="username">${username}</span>
+                                            <div class="mt-1">${difficultyHtml}</div>
+                                        </div>
+                                    </div>
+                                    <span class="badge bg-dark">${solved} / ${goal}</span>
                                 </div>
                                 <div class="progress mb-4">
                                     <div class="progress-bar ${color} progress-bar-striped progress-bar-animated" 
@@ -66,7 +124,7 @@
                                 </div>
                                 
                                 <div class="history-section mt-3">
-                                    <h6 class="text-muted small text-uppercase">Weekly History (Problems Solved)</h6>
+                                    <h6 class="text-muted small text-uppercase">Weekly History</h6>
                                     <div class="d-flex justify-content-between text-center small">
                                         ${stats.history && stats.history.length > 0 ? stats.history.slice(-4).map(w => `
                                             <div class="px-2">
@@ -88,7 +146,8 @@
                     document.getElementById('last-updated').innerText = `Last updated: ${lastUpdated}`;
                 }
             } catch (e) {
-                document.getElementById('leaderboard').innerHTML = '<div class="alert alert-danger">Failed to load stats. Check if data/stats.json exists.</div>';
+                console.error(e);
+                document.getElementById('leaderboard').innerHTML = '<div class="alert alert-danger">Failed to load stats. Check console for details.</div>';
             }
         }
 
