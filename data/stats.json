@@ -1,41 +1,67 @@
 {
   "yyxxcc-n": {
     "baseline": 339,
-    "current": 346,
+    "current": 348,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-06 12:54 UTC",
-    "week_solved": 8,
+    "last_updated": "2026-01-06 13:29 UTC",
+    "week_solved": 10,
     "week_breakdown": {
       "Easy": 1,
-      "Medium": 4,
+      "Medium": 6,
       "Hard": 3
+    },
+    "solved_problems": {
+      "678": "Medium",
+      "1249": "Medium",
+      "856": "Medium",
+      "1190": "Medium",
+      "2197": "Hard",
+      "2751": "Hard",
+      "1717": "Medium",
+      "1209": "Medium",
+      "2696": "Easy",
+      "1172": "Hard"
     }
   },
   "pdwang96": {
     "baseline": 555,
-    "current": 551,
+    "current": 552,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-06 12:54 UTC",
-    "week_solved": 0,
+    "last_updated": "2026-01-06 13:29 UTC",
+    "week_solved": 1,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 0,
+      "Medium": 1,
       "Hard": 0
+    },
+    "solved_problems": {
+      "447": "Medium"
     }
   },
   "user9993g": {
     "baseline": 5,
-    "current": 656,
+    "current": 658,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-06 12:54 UTC",
-    "week_solved": 7,
+    "last_updated": "2026-01-06 13:29 UTC",
+    "week_solved": 9,
     "week_breakdown": {
       "Easy": 1,
-      "Medium": 6,
-      "Hard": 0
+      "Medium": 7,
+      "Hard": 1
+    },
+    "solved_problems": {
+      "227": "Medium",
+      "224": "Hard",
+      "394": "Medium",
+      "1006": "Medium",
+      "2116": "Medium",
+      "1111": "Medium",
+      "1249": "Medium",
+      "1190": "Medium",
+      "1614": "Easy"
     }
   },
   "scorego": {
@@ -43,12 +69,19 @@
     "current": 504,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-06 12:54 UTC",
-    "week_solved": 4,
+    "last_updated": "2026-01-06 13:29 UTC",
+    "week_solved": 5,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 4,
+      "Medium": 5,
       "Hard": 0
+    },
+    "solved_problems": {
+      "2841": "Medium",
+      "3693": "Medium",
+      "852": "Medium",
+      "695": "Medium",
+      "200": "Medium"
     }
   }
 }

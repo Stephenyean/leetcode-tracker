@@ -6,8 +6,18 @@ from datetime import datetime, timedelta, timezone
 LEETCODE_COM_URL = "https://leetcode.com/graphql"
 LEETCODE_CN_URL = "https://leetcode.cn/graphql"
 
-def get_leetcode_stats(username, region="CN"):
-    # Query for LeetCode.com (Stats Only)
+def get_recent_submissions(username, region="CN"):
+    """
+    Returns a list of unique problems solved in the current week (Monday 00:00 UTC start).
+    Format: [{"id": "1", "diff": "Easy"}, ...]
+    """
+    
+    # Calculate start of week (Monday 00:00 UTC)
+    now = datetime.now(timezone.utc)
+    days_since_monday = now.weekday()
+    start_of_week = (now - timedelta(days=days_since_monday)).replace(hour=0, minute=0, second=0, microsecond=0)
+    start_ts = start_of_week.timestamp()
+
     query_com = """
     query userSessionProgress($username: String!) {
       matchedUser(username: $username) {
@@ -20,8 +30,7 @@ def get_leetcode_stats(username, region="CN"):
       }
     }
     """
-
-    # Query for LeetCode.com (Recent Submissions)
+    
     query_com_recent = """
     query recentAcSubmissions($username: String!) {
       recentAcSubmissionList(username: $username, limit: 50) {
@@ -31,7 +40,6 @@ def get_leetcode_stats(username, region="CN"):
     }
     """
 
-    # Query for LeetCode.cn (Recent Submissions)
     query_cn_recent = """
     query recentSubmissions($userSlug: String!) {
       recentSubmissions(userSlug: $userSlug) {
@@ -44,8 +52,7 @@ def get_leetcode_stats(username, region="CN"):
       }
     }
     """
-
-    # Query for LeetCode.cn (Stats Only)
+    
     query_cn_stats = """
     query userProfileUserQuestionProgress($userSlug: String!) {
       userProfileUserQuestionProgress(userSlug: $userSlug) {
@@ -62,108 +69,61 @@ def get_leetcode_stats(username, region="CN"):
         'Referer': 'https://leetcode.com',
         'Content-Type': 'application/json'
     }
-    
-    # --- US Region Logic ---
-    if region == 'US':
-        try:
-            # 1. Fetch Total Stats
-            total_ac = 0
-            response = requests.post(LEETCODE_COM_URL, json={'query': query_com, 'variables': {"username": username}}, headers=headers, timeout=10)
-            if response.status_code == 200:
-                data = response.json()
+
+    result = {
+        "total_ac": 0,
+        "new_solved": [] # List of {id, diff}
+    }
+
+    try:
+        if region == 'US':
+            # 1. Total AC
+            resp = requests.post(LEETCODE_COM_URL, json={'query': query_com, 'variables': {"username": username}}, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                data = resp.json()
                 if data.get('data') and data['data'].get('matchedUser'):
-                    matched = data['data']['matchedUser']
-                    stats = matched['submitStats']['acSubmissionNum']
-                    total_ac = next(item['count'] for item in stats if item['difficulty'] == 'All')
-                else:
-                    print(f"US Stats not found for {username}")
-                    return None
-            
-            # 2. Fetch Recent Submissions for Weekly Count
-            week_solved_count = 0
-            response_recent = requests.post(LEETCODE_COM_URL, json={'query': query_com_recent, 'variables': {"username": username}}, headers=headers, timeout=10)
-            if response_recent.status_code == 200:
-                data_recent = response_recent.json()
-                if data_recent.get('data') and data_recent['data'].get('recentAcSubmissionList'):
-                    submissions = data_recent['data']['recentAcSubmissionList']
-                    
-                    # Calculate start of week (Monday 00:00 UTC)
-                    now = datetime.now(timezone.utc)
-                    days_since_monday = now.weekday()
-                    start_of_week = (now - timedelta(days=days_since_monday)).replace(hour=0, minute=0, second=0, microsecond=0)
-                    start_ts = start_of_week.timestamp()
-                    
-                    # Filter submissions
-                    solved_questions = set()
-                    for sub in submissions:
-                        # US API returns timestamp as string seconds
-                        ts = int(sub['timestamp'])
-                        if ts >= start_ts:
-                            solved_questions.add(sub['title'])
-                    
-                    week_solved_count = len(solved_questions)
-                    print(f"Calculated {week_solved_count} unique problems solved since {start_of_week}")
+                    stats = data['data']['matchedUser']['submitStats']['acSubmissionNum']
+                    result["total_ac"] = next(item['count'] for item in stats if item['difficulty'] == 'All')
 
-            print(f"Successfully fetched {username} from {LEETCODE_COM_URL}")
-            return {"total_ac": total_ac, "week_solved": week_solved_count, "week_breakdown": None}
+            # 2. Recent Submissions
+            resp_recent = requests.post(LEETCODE_COM_URL, json={'query': query_com_recent, 'variables': {"username": username}}, headers=headers, timeout=10)
+            if resp_recent.status_code == 200:
+                data = resp_recent.json()
+                if data.get('data') and data['data'].get('recentAcSubmissionList'):
+                    for sub in data['data']['recentAcSubmissionList']:
+                        if int(sub['timestamp']) >= start_ts:
+                            # US API doesn't give difficulty in this query, defaulting to Unknown or skipping diff logic
+                            result["new_solved"].append({
+                                "id": sub['title'], # Using title as ID for US since slug/id missing in simple query
+                                "diff": "Unknown" 
+                            })
 
-        except Exception as e:
-            print(f"Error fetching {username} from {LEETCODE_COM_URL}: {e}")
-        return None
-
-    # --- CN Region Logic ---
-    if region == 'CN':
-        try:
-            # 1. Fetch Total Stats
-            total_ac = 0
-            response_stats = requests.post(LEETCODE_CN_URL, json={'query': query_cn_stats, 'variables': {"userSlug": username}}, headers=headers, timeout=10)
-            if response_stats.status_code == 200:
-                data = response_stats.json()
+        elif region == 'CN':
+            # 1. Total AC
+            resp = requests.post(LEETCODE_CN_URL, json={'query': query_cn_stats, 'variables': {"userSlug": username}}, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                data = resp.json()
                 if data.get('data') and data['data'].get('userProfileUserQuestionProgress'):
                     stats = data['data']['userProfileUserQuestionProgress']['numAcceptedQuestions']
-                    total_ac = sum(item['count'] for item in stats)
-                else:
-                    print(f"CN Stats not found for {username}")
-                    return None
-            
-            # 2. Fetch Recent Submissions for Weekly Count
-            week_solved_count = 0
-            week_breakdown = {"Easy": 0, "Medium": 0, "Hard": 0}
-            
-            response_recent = requests.post(LEETCODE_CN_URL, json={'query': query_cn_recent, 'variables': {"userSlug": username}}, headers=headers, timeout=10)
-            if response_recent.status_code == 200:
-                data_recent = response_recent.json()
-                if data_recent.get('data') and data_recent['data'].get('recentSubmissions'):
-                    submissions = data_recent['data']['recentSubmissions']
-                    
-                    # Calculate start of week (Monday 00:00 UTC)
-                    now = datetime.now(timezone.utc)
-                    days_since_monday = now.weekday()
-                    start_of_week = (now - timedelta(days=days_since_monday)).replace(hour=0, minute=0, second=0, microsecond=0)
-                    start_ts = start_of_week.timestamp()
-                    
-                    # Filter submissions
-                    solved_questions = set()
-                    
-                    for sub in submissions:
-                        if sub['submitTime'] >= start_ts and sub['status'] == 'A_10':
-                            q_id = sub['question']['questionFrontendId']
-                            if q_id not in solved_questions:
-                                solved_questions.add(q_id)
-                                diff = sub['question']['difficulty'] # "Easy", "Medium", "Hard"
-                                if diff in week_breakdown:
-                                    week_breakdown[diff] += 1
-                    
-                    week_solved_count = len(solved_questions)
-                    print(f"Calculated {week_solved_count} unique problems solved since {start_of_week}")
+                    result["total_ac"] = sum(item['count'] for item in stats)
 
-            print(f"Successfully fetched {username} from {LEETCODE_CN_URL}")
-            return {"total_ac": total_ac, "week_solved": week_solved_count, "week_breakdown": week_breakdown}
+            # 2. Recent Submissions
+            resp_recent = requests.post(LEETCODE_CN_URL, json={'query': query_cn_recent, 'variables': {"userSlug": username}}, headers=headers, timeout=10)
+            if resp_recent.status_code == 200:
+                data = resp_recent.json()
+                if data.get('data') and data['data'].get('recentSubmissions'):
+                    for sub in data['data']['recentSubmissions']:
+                        if sub['status'] == 'A_10' and sub['submitTime'] >= start_ts:
+                            result["new_solved"].append({
+                                "id": sub['question']['questionFrontendId'],
+                                "diff": sub['question']['difficulty']
+                            })
 
-        except Exception as e:
-            print(f"Error fetching {username} from {LEETCODE_CN_URL}: {e}")
-    
-    return None
+    except Exception as e:
+        print(f"Error fetching {username}: {e}")
+        return None
+
+    return result
 
 def main():
     with open('data/users.json', 'r') as f:
@@ -180,60 +140,64 @@ def main():
     current_iso_week = datetime.now(timezone.utc).isocalendar()[1]
 
     for entry in user_list:
-        # Handle both string (legacy) and object formats
         if isinstance(entry, dict):
             username = entry.get("username")
             region = entry.get("region", "CN")
         else:
             username = entry
-            region = "CN" # Default to CN as requested
+            region = "CN"
 
-        result = get_leetcode_stats(username, region)
-        if result is None:
+        fetched = get_recent_submissions(username, region)
+        if not fetched:
             continue
-            
-        current_total = result["total_ac"]
-        week_solved = result["week_solved"]
-        week_breakdown = result.get("week_breakdown")
 
         if username not in all_stats:
             all_stats[username] = {
-                "baseline": current_total,
-                "current": current_total,
                 "week": current_iso_week,
-                "history": []
+                "history": [],
+                "solved_problems": {} # {id: diff}
             }
-        
-        # Reset baseline if it's a new week
+
+        # Check for new week -> Archive & Reset
         if all_stats[username].get("week") != current_iso_week:
-            # Archive previous week logic...
-            previous_week = all_stats[username].get("week")
-            previous_baseline = all_stats[username].get("baseline", 0)
-            previous_current = all_stats[username].get("current", 0)
-            solved_count = previous_current - previous_baseline
-            
-            if previous_week:
+            # Archive
+            prev_solved = len(all_stats[username].get("solved_problems", {}))
+            if prev_solved > 0:
                 all_stats[username]["history"].append({
-                    "week": previous_week,
+                    "week": all_stats[username]["week"],
                     "year": datetime.now().year,
-                    "solved": solved_count
+                    "solved": prev_solved
                 })
             
-            all_stats[username]["baseline"] = current_total
+            # Reset
             all_stats[username]["week"] = current_iso_week
+            all_stats[username]["solved_problems"] = {}
         
-        all_stats[username]["current"] = current_total
+        # Ensure solved_problems dict exists (for old schema compatibility)
+        if "solved_problems" not in all_stats[username]:
+             all_stats[username]["solved_problems"] = {}
+
+        # Merge new submissions
+        for problem in fetched["new_solved"]:
+            p_id = problem["id"]
+            p_diff = problem["diff"]
+            all_stats[username]["solved_problems"][p_id] = p_diff
+
+        # Calculate Stats
+        solved_problems = all_stats[username]["solved_problems"]
+        week_solved = len(solved_problems)
+        
+        breakdown = {"Easy": 0, "Medium": 0, "Hard": 0}
+        for diff in solved_problems.values():
+            if diff in breakdown:
+                breakdown[diff] += 1
+        
+        # Update State
+        all_stats[username]["current"] = fetched["total_ac"]
         all_stats[username]["last_updated"] = today_str
-        
-        # Store the precise count for display
-        if week_solved is not None:
-             all_stats[username]["week_solved"] = week_solved
-        else:
-             # Fallback for .com or errors
-             all_stats[username]["week_solved"] = current_total - all_stats[username]["baseline"]
-             
-        if week_breakdown:
-            all_stats[username]["week_breakdown"] = week_breakdown
+        all_stats[username]["week_solved"] = week_solved
+        all_stats[username]["week_breakdown"] = breakdown
+        # We don't need 'baseline' anymore with this logic, but keeping it won't hurt.
 
     with open(stats_file, 'w') as f:
         json.dump(all_stats, f, indent=2)
