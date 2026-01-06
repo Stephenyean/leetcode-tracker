@@ -37,18 +37,16 @@
     <script>
         function updateCountdown() {
             const now = new Date();
-            // Calculate next Monday 00:00 UTC (which is Sunday night for many)
-            // Adjust to your preferred deadline. Here we assume Monday 00:00 UTC is the reset.
-            const nextMonday = new Date();
-            nextMonday.setUTCDate(now.getUTCDate() + (7 - now.getUTCDay()) % 7 + (now.getUTCDay() === 1 && now.getUTCHours() < 24 ? 0 : 7)); 
-            nextMonday.setUTCHours(0, 0, 0, 0);
+            // Target the next Monday at 00:00 UTC
+            const target = new Date(now);
+            // day 0 is Sunday, 1 is Monday... 
+            // We want to add days until we reach the next Monday (1)
+            const daysUntilMonday = (1 - now.getUTCDay() + 7) % 7 || 7;
             
-            // If today is Monday, target IS today 00:00 (which passed), so add 7 days
-            if (nextMonday <= now) {
-                nextMonday.setUTCDate(nextMonday.getUTCDate() + 7);
-            }
+            target.setUTCDate(now.getUTCDate() + daysUntilMonday);
+            target.setUTCHours(0, 0, 0, 0);
 
-            const diff = nextMonday - now;
+            const diff = target - now;
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
