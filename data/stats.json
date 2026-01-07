@@ -1,15 +1,15 @@
 {
   "yyxxcc-n": {
     "baseline": 339,
-    "current": 349,
+    "current": 350,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-07 11:42 UTC",
-    "week_solved": 12,
+    "last_updated": "2026-01-07 12:53 UTC",
+    "week_solved": 13,
     "week_breakdown": {
       "Easy": 1,
       "Medium": 7,
-      "Hard": 4
+      "Hard": 5
     },
     "solved_problems": {
       "678": "Medium",
@@ -23,7 +23,8 @@
       "2696": "Easy",
       "1172": "Hard",
       "227": "Medium",
-      "726": "Hard"
+      "726": "Hard",
+      "1096": "Hard"
     }
   },
   "pdwang96": {
@@ -31,7 +32,7 @@
     "current": 553,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-07 11:42 UTC",
+    "last_updated": "2026-01-07 12:53 UTC",
     "week_solved": 2,
     "week_breakdown": {
       "Easy": 0,
@@ -45,15 +46,15 @@
   },
   "user9993g": {
     "baseline": 5,
-    "current": 660,
+    "current": 663,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-07 11:42 UTC",
-    "week_solved": 11,
+    "last_updated": "2026-01-07 12:53 UTC",
+    "week_solved": 14,
     "week_breakdown": {
       "Easy": 1,
-      "Medium": 7,
-      "Hard": 3
+      "Medium": 9,
+      "Hard": 4
     },
     "solved_problems": {
       "227": "Medium",
@@ -66,19 +67,22 @@
       "1190": "Medium",
       "1614": "Easy",
       "726": "Hard",
-      "1106": "Hard"
+      "1106": "Hard",
+      "1670": "Medium",
+      "649": "Medium",
+      "2296": "Hard"
     }
   },
   "scorego": {
     "baseline": 218,
-    "current": 505,
+    "current": 506,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-07 11:42 UTC",
-    "week_solved": 6,
+    "last_updated": "2026-01-07 12:53 UTC",
+    "week_solved": 7,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 6,
+      "Medium": 7,
       "Hard": 0
     },
     "solved_problems": {
@@ -87,7 +91,8 @@
       "852": "Medium",
       "695": "Medium",
       "200": "Medium",
-      "1161": "Medium"
+      "1161": "Medium",
+      "2271": "Medium"
     }
   }
 }
