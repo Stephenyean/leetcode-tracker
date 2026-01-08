@@ -4,7 +4,7 @@
     "current": 353,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-08 09:31 UTC",
+    "last_updated": "2026-01-08 10:28 UTC",
     "week_solved": 18,
     "week_breakdown": {
       "Easy": 1,
@@ -37,7 +37,7 @@
     "current": 554,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-08 09:31 UTC",
+    "last_updated": "2026-01-08 10:28 UTC",
     "week_solved": 3,
     "week_breakdown": {
       "Easy": 0,
@@ -55,7 +55,7 @@
     "current": 667,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-08 09:31 UTC",
+    "last_updated": "2026-01-08 10:28 UTC",
     "week_solved": 18,
     "week_breakdown": {
       "Easy": 3,
@@ -88,7 +88,7 @@
     "current": 507,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-08 09:31 UTC",
+    "last_updated": "2026-01-08 10:28 UTC",
     "week_solved": 8,
     "week_breakdown": {
       "Easy": 0,
@@ -116,14 +116,17 @@
       "2962": "Medium",
       "1358": "Medium",
       "2537": "Medium",
-      "2799": "Medium"
+      "2799": "Medium",
+      "1248": "Medium",
+      "209": "Medium",
+      "930": "Medium"
     },
-    "current": 48,
-    "last_updated": "2026-01-08 09:31 UTC",
-    "week_solved": 7,
+    "current": 51,
+    "last_updated": "2026-01-08 10:28 UTC",
+    "week_solved": 10,
     "week_breakdown": {
       "Easy": 1,
-      "Medium": 6,
+      "Medium": 9,
       "Hard": 0
     }
   }
