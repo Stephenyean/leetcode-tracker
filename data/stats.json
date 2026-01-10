@@ -1,15 +1,15 @@
 {
   "yyxxcc-n": {
     "baseline": 339,
-    "current": 360,
+    "current": 364,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-10 01:55 UTC",
-    "week_solved": 26,
+    "last_updated": "2026-01-10 03:36 UTC",
+    "week_solved": 30,
     "week_breakdown": {
       "Easy": 3,
-      "Medium": 13,
-      "Hard": 10
+      "Medium": 15,
+      "Hard": 12
     },
     "solved_problems": {
       "678": "Medium",
@@ -37,19 +37,23 @@
       "622": "Medium",
       "2071": "Hard",
       "239": "Hard",
-      "LCR 184": "Medium"
+      "LCR 184": "Medium",
+      "862": "Hard",
+      "3589": "Medium",
+      "2398": "Hard",
+      "1438": "Medium"
     }
   },
   "pdwang96": {
     "baseline": 555,
-    "current": 557,
+    "current": 558,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-10 01:55 UTC",
-    "week_solved": 6,
+    "last_updated": "2026-01-10 03:36 UTC",
+    "week_solved": 7,
     "week_breakdown": {
       "Easy": 2,
-      "Medium": 4,
+      "Medium": 5,
       "Hard": 0
     },
     "solved_problems": {
@@ -58,7 +62,8 @@
       "3446": "Medium",
       "1329": "Medium",
       "303": "Easy",
-      "3427": "Easy"
+      "3427": "Easy",
+      "3652": "Medium"
     }
   },
   "user9993g": {
@@ -66,7 +71,7 @@
     "current": 669,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-10 01:55 UTC",
+    "last_updated": "2026-01-10 03:36 UTC",
     "week_solved": 20,
     "week_breakdown": {
       "Easy": 4,
@@ -98,14 +103,14 @@
   },
   "scorego": {
     "baseline": 218,
-    "current": 509,
+    "current": 510,
     "week": 2,
     "history": [],
-    "last_updated": "2026-01-10 01:55 UTC",
-    "week_solved": 10,
+    "last_updated": "2026-01-10 03:36 UTC",
+    "week_solved": 11,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 10,
+      "Medium": 11,
       "Hard": 0
     },
     "solved_problems": {
@@ -118,7 +123,8 @@
       "2271": "Medium",
       "1616": "Medium",
       "1146": "Medium",
-      "525": "Medium"
+      "525": "Medium",
+      "3755": "Medium"
     }
   },
   "great-mirzakhani3ye": {
@@ -141,7 +147,7 @@
       "704": "Easy"
     },
     "current": 55,
-    "last_updated": "2026-01-10 01:55 UTC",
+    "last_updated": "2026-01-10 03:36 UTC",
     "week_solved": 14,
     "week_breakdown": {
       "Easy": 3,
