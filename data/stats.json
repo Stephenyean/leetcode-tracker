@@ -2,184 +2,101 @@
   "yyxxcc-n": {
     "baseline": 339,
     "current": 373,
-    "week": 2,
-    "history": [],
-    "last_updated": "2026-01-11 23:42 UTC",
-    "week_solved": 41,
+    "week": 3,
+    "history": [
+      {
+        "week": 2,
+        "year": 2026,
+        "solved": 41
+      }
+    ],
+    "last_updated": "2026-01-12 00:48 UTC",
+    "week_solved": 1,
     "week_breakdown": {
-      "Easy": 3,
-      "Medium": 21,
-      "Hard": 17
+      "Easy": 0,
+      "Medium": 0,
+      "Hard": 1
     },
     "solved_problems": {
-      "678": "Medium",
-      "1249": "Medium",
-      "856": "Medium",
-      "1190": "Medium",
-      "2197": "Hard",
-      "2751": "Hard",
-      "1717": "Medium",
-      "1209": "Medium",
-      "2696": "Easy",
-      "1172": "Hard",
-      "227": "Medium",
-      "726": "Hard",
-      "1096": "Hard",
-      "772": "Hard",
-      "1106": "Hard",
-      "456": "Medium",
-      "1944": "Hard",
-      "2866": "Medium",
-      "933": "Easy",
-      "1670": "Medium",
-      "346": "Easy",
-      "362": "Medium",
-      "622": "Medium",
-      "2071": "Hard",
-      "239": "Hard",
-      "LCR 184": "Medium",
-      "862": "Hard",
-      "3589": "Medium",
-      "2398": "Hard",
-      "1438": "Medium",
-      "502": "Hard",
-      "1499": "Hard",
-      "2296": "Hard",
-      "654": "Medium",
-      "3113": "Hard",
-      "901": "Medium",
-      "739": "Medium",
-      "2454": "Hard",
-      "3542": "Medium",
-      "1705": "Medium",
-      "1124": "Medium"
+      "84": "Hard"
     }
   },
   "pdwang96": {
     "baseline": 555,
     "current": 559,
-    "week": 2,
-    "history": [],
-    "last_updated": "2026-01-11 23:42 UTC",
-    "week_solved": 8,
+    "week": 3,
+    "history": [
+      {
+        "week": 2,
+        "year": 2026,
+        "solved": 8
+      }
+    ],
+    "last_updated": "2026-01-12 00:48 UTC",
+    "week_solved": 0,
     "week_breakdown": {
-      "Easy": 2,
-      "Medium": 6,
+      "Easy": 0,
+      "Medium": 0,
       "Hard": 0
     },
-    "solved_problems": {
-      "447": "Medium",
-      "456": "Medium",
-      "3446": "Medium",
-      "1329": "Medium",
-      "303": "Easy",
-      "3427": "Easy",
-      "3652": "Medium",
-      "1524": "Medium"
-    }
+    "solved_problems": {}
   },
   "user9993g": {
     "baseline": 5,
     "current": 669,
-    "week": 2,
-    "history": [],
-    "last_updated": "2026-01-11 23:42 UTC",
-    "week_solved": 20,
+    "week": 3,
+    "history": [
+      {
+        "week": 2,
+        "year": 2026,
+        "solved": 20
+      }
+    ],
+    "last_updated": "2026-01-12 00:48 UTC",
+    "week_solved": 0,
     "week_breakdown": {
-      "Easy": 4,
-      "Medium": 12,
-      "Hard": 4
+      "Easy": 0,
+      "Medium": 0,
+      "Hard": 0
     },
-    "solved_problems": {
-      "227": "Medium",
-      "224": "Hard",
-      "394": "Medium",
-      "1006": "Medium",
-      "2116": "Medium",
-      "1111": "Medium",
-      "1249": "Medium",
-      "1190": "Medium",
-      "1614": "Easy",
-      "726": "Hard",
-      "1106": "Hard",
-      "1670": "Medium",
-      "649": "Medium",
-      "2296": "Hard",
-      "3508": "Medium",
-      "232": "Easy",
-      "225": "Easy",
-      "622": "Medium",
-      "641": "Medium",
-      "1046": "Easy"
-    }
+    "solved_problems": {}
   },
   "scorego": {
     "baseline": 218,
     "current": 519,
-    "week": 2,
-    "history": [],
-    "last_updated": "2026-01-11 23:42 UTC",
-    "week_solved": 21,
+    "week": 3,
+    "history": [
+      {
+        "week": 2,
+        "year": 2026,
+        "solved": 21
+      }
+    ],
+    "last_updated": "2026-01-12 00:48 UTC",
+    "week_solved": 0,
     "week_breakdown": {
-      "Easy": 2,
-      "Medium": 19,
+      "Easy": 0,
+      "Medium": 0,
       "Hard": 0
     },
-    "solved_problems": {
-      "2841": "Medium",
-      "3693": "Medium",
-      "852": "Medium",
-      "695": "Medium",
-      "200": "Medium",
-      "1161": "Medium",
-      "2271": "Medium",
-      "1616": "Medium",
-      "1146": "Medium",
-      "525": "Medium",
-      "3755": "Medium",
-      "1477": "Medium",
-      "933": "Easy",
-      "70": "Easy",
-      "198": "Medium",
-      "2466": "Medium",
-      "213": "Medium",
-      "2266": "Medium",
-      "2606": "Medium",
-      "740": "Medium",
-      "2320": "Medium"
-    }
+    "solved_problems": {}
   },
   "great-mirzakhani3ye": {
-    "week": 2,
-    "history": [],
-    "solved_problems": {
-      "3258": "Easy",
-      "713": "Medium",
-      "3325": "Medium",
-      "2962": "Medium",
-      "1358": "Medium",
-      "2537": "Medium",
-      "2799": "Medium",
-      "1248": "Medium",
-      "209": "Medium",
-      "930": "Medium",
-      "35": "Easy",
-      "34": "Medium",
-      "2904": "Medium",
-      "704": "Easy",
-      "2529": "Easy",
-      "744": "Easy",
-      "2389": "Easy",
-      "1385": "Easy",
-      "2300": "Medium",
-      "1170": "Medium"
-    },
+    "week": 3,
+    "history": [
+      {
+        "week": 2,
+        "year": 2026,
+        "solved": 20
+      }
+    ],
+    "solved_problems": {},
     "current": 61,
-    "last_updated": "2026-01-11 23:42 UTC",
-    "week_solved": 20,
+    "last_updated": "2026-01-12 00:48 UTC",
+    "week_solved": 0,
     "week_breakdown": {
-      "Easy": 7,
-      "Medium": 13,
+      "Easy": 0,
+      "Medium": 0,
       "Hard": 0
     }
   }
