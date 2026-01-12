@@ -136,7 +136,8 @@ def main():
     else:
         all_stats = {}
 
-    today_str = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
+    tz_cn = timezone(timedelta(hours=8))
+    today_str = datetime.now(tz_cn).strftime('%Y-%m-%d %H:%M UTC+8')
     current_iso_week = datetime.now(timezone.utc).isocalendar()[1]
 
     for entry in user_list:
