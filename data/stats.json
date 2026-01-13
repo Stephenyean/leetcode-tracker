@@ -1,7 +1,7 @@
 {
   "yyxxcc-n": {
     "baseline": 339,
-    "current": 375,
+    "current": 376,
     "week": 3,
     "history": [
       {
@@ -10,18 +10,19 @@
         "solved": 41
       }
     ],
-    "last_updated": "2026-01-13 19:43 UTC+8",
-    "week_solved": 4,
+    "last_updated": "2026-01-13 20:55 UTC+8",
+    "week_solved": 5,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 1,
+      "Medium": 2,
       "Hard": 3
     },
     "solved_problems": {
       "84": "Hard",
       "221": "Medium",
       "85": "Hard",
-      "42": "Hard"
+      "42": "Hard",
+      "1504": "Medium"
     }
   },
   "pdwang96": {
@@ -35,7 +36,7 @@
         "solved": 8
       }
     ],
-    "last_updated": "2026-01-13 19:43 UTC+8",
+    "last_updated": "2026-01-13 20:55 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -46,7 +47,7 @@
   },
   "user9993g": {
     "baseline": 5,
-    "current": 671,
+    "current": 675,
     "week": 3,
     "history": [
       {
@@ -55,21 +56,25 @@
         "solved": 20
       }
     ],
-    "last_updated": "2026-01-13 19:43 UTC+8",
-    "week_solved": 2,
+    "last_updated": "2026-01-13 20:55 UTC+8",
+    "week_solved": 6,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 1,
-      "Hard": 1
+      "Medium": 2,
+      "Hard": 4
     },
     "solved_problems": {
       "239": "Hard",
-      "LCR 184": "Medium"
+      "LCR 184": "Medium",
+      "502": "Hard",
+      "355": "Medium",
+      "2931": "Hard",
+      "2398": "Hard"
     }
   },
   "scorego": {
     "baseline": 218,
-    "current": 521,
+    "current": 522,
     "week": 3,
     "history": [
       {
@@ -78,17 +83,18 @@
         "solved": 21
       }
     ],
-    "last_updated": "2026-01-13 19:43 UTC+8",
-    "week_solved": 3,
+    "last_updated": "2026-01-13 20:55 UTC+8",
+    "week_solved": 4,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 2,
+      "Medium": 3,
       "Hard": 1
     },
     "solved_problems": {
       "923": "Medium",
       "42": "Hard",
-      "LCR 031": "Medium"
+      "LCR 031": "Medium",
+      "\u9762\u8bd5\u9898 16.25": "Medium"
     }
   },
   "great-mirzakhani3ye": {
@@ -102,7 +108,7 @@
     ],
     "solved_problems": {},
     "current": 61,
-    "last_updated": "2026-01-13 19:43 UTC+8",
+    "last_updated": "2026-01-13 20:55 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
