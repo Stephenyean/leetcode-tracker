@@ -1,7 +1,7 @@
 {
   "yyxxcc-n": {
     "baseline": 339,
-    "current": 384,
+    "current": 386,
     "week": 3,
     "history": [
       {
@@ -10,12 +10,12 @@
         "solved": 41
       }
     ],
-    "last_updated": "2026-01-15 09:58 UTC+8",
-    "week_solved": 13,
+    "last_updated": "2026-01-15 11:47 UTC+8",
+    "week_solved": 15,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 9,
-      "Hard": 4
+      "Medium": 10,
+      "Hard": 5
     },
     "solved_problems": {
       "84": "Hard",
@@ -30,7 +30,9 @@
       "402": "Medium",
       "1081": "Medium",
       "316": "Medium",
-      "321": "Hard"
+      "321": "Hard",
+      "1383": "Hard",
+      "2542": "Medium"
     }
   },
   "pdwang96": {
@@ -44,7 +46,7 @@
         "solved": 8
       }
     ],
-    "last_updated": "2026-01-15 09:58 UTC+8",
+    "last_updated": "2026-01-15 11:47 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -64,7 +66,7 @@
         "solved": 20
       }
     ],
-    "last_updated": "2026-01-15 09:58 UTC+8",
+    "last_updated": "2026-01-15 11:47 UTC+8",
     "week_solved": 8,
     "week_breakdown": {
       "Easy": 0,
@@ -84,7 +86,7 @@
   },
   "scorego": {
     "baseline": 218,
-    "current": 527,
+    "current": 528,
     "week": 3,
     "history": [
       {
@@ -93,12 +95,12 @@
         "solved": 21
       }
     ],
-    "last_updated": "2026-01-15 09:58 UTC+8",
-    "week_solved": 13,
+    "last_updated": "2026-01-15 11:47 UTC+8",
+    "week_solved": 14,
     "week_breakdown": {
       "Easy": 1,
       "Medium": 8,
-      "Hard": 4
+      "Hard": 5
     },
     "solved_problems": {
       "923": "Medium",
@@ -113,7 +115,8 @@
       "122": "Medium",
       "121": "Easy",
       "2555": "Medium",
-      "188": "Hard"
+      "188": "Hard",
+      "2009": "Hard"
     }
   },
   "great-mirzakhani3ye": {
@@ -127,7 +130,7 @@
     ],
     "solved_problems": {},
     "current": 61,
-    "last_updated": "2026-01-15 09:58 UTC+8",
+    "last_updated": "2026-01-15 11:47 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
