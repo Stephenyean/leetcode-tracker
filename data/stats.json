@@ -10,12 +10,12 @@
         "solved": 41
       }
     ],
-    "last_updated": "2026-01-17 17:24 UTC+8",
-    "week_solved": 22,
+    "last_updated": "2026-01-17 17:42 UTC+8",
+    "week_solved": 23,
     "week_breakdown": {
       "Easy": 0,
       "Medium": 12,
-      "Hard": 10
+      "Hard": 11
     },
     "solved_problems": {
       "84": "Hard",
@@ -39,7 +39,8 @@
       "1851": "Hard",
       "264": "Medium",
       "2940": "Hard",
-      "3399": "Hard"
+      "3399": "Hard",
+      "23": "Hard"
     }
   },
   "pdwang96": {
@@ -53,7 +54,7 @@
         "solved": 8
       }
     ],
-    "last_updated": "2026-01-17 17:24 UTC+8",
+    "last_updated": "2026-01-17 17:42 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -73,7 +74,7 @@
         "solved": 20
       }
     ],
-    "last_updated": "2026-01-17 17:24 UTC+8",
+    "last_updated": "2026-01-17 17:42 UTC+8",
     "week_solved": 9,
     "week_breakdown": {
       "Easy": 0,
@@ -103,7 +104,7 @@
         "solved": 21
       }
     ],
-    "last_updated": "2026-01-17 17:24 UTC+8",
+    "last_updated": "2026-01-17 17:42 UTC+8",
     "week_solved": 19,
     "week_breakdown": {
       "Easy": 1,
@@ -146,7 +147,7 @@
       "2080": "Medium"
     },
     "current": 63,
-    "last_updated": "2026-01-17 17:24 UTC+8",
+    "last_updated": "2026-01-17 17:42 UTC+8",
     "week_solved": 2,
     "week_breakdown": {
       "Easy": 1,
