@@ -1,7 +1,7 @@
 {
   "yyxxcc-n": {
     "baseline": 339,
-    "current": 394,
+    "current": 398,
     "week": 3,
     "history": [
       {
@@ -10,12 +10,12 @@
         "solved": 41
       }
     ],
-    "last_updated": "2026-01-18 11:55 UTC+8",
-    "week_solved": 26,
+    "last_updated": "2026-01-18 12:46 UTC+8",
+    "week_solved": 30,
     "week_breakdown": {
-      "Easy": 0,
-      "Medium": 15,
-      "Hard": 11
+      "Easy": 1,
+      "Medium": 17,
+      "Hard": 12
     },
     "solved_problems": {
       "84": "Hard",
@@ -43,7 +43,11 @@
       "23": "Hard",
       "373": "Medium",
       "767": "Medium",
-      "1054": "Medium"
+      "1054": "Medium",
+      "3816": "Hard",
+      "3815": "Medium",
+      "3814": "Medium",
+      "3813": "Easy"
     }
   },
   "pdwang96": {
@@ -57,7 +61,7 @@
         "solved": 8
       }
     ],
-    "last_updated": "2026-01-18 11:55 UTC+8",
+    "last_updated": "2026-01-18 12:46 UTC+8",
     "week_solved": 4,
     "week_breakdown": {
       "Easy": 0,
@@ -82,7 +86,7 @@
         "solved": 20
       }
     ],
-    "last_updated": "2026-01-18 11:55 UTC+8",
+    "last_updated": "2026-01-18 12:46 UTC+8",
     "week_solved": 9,
     "week_breakdown": {
       "Easy": 0,
@@ -112,7 +116,7 @@
         "solved": 21
       }
     ],
-    "last_updated": "2026-01-18 11:55 UTC+8",
+    "last_updated": "2026-01-18 12:46 UTC+8",
     "week_solved": 20,
     "week_breakdown": {
       "Easy": 1,
@@ -161,7 +165,7 @@
       "1870": "Medium"
     },
     "current": 67,
-    "last_updated": "2026-01-18 11:55 UTC+8",
+    "last_updated": "2026-01-18 12:46 UTC+8",
     "week_solved": 7,
     "week_breakdown": {
       "Easy": 1,
