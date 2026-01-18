@@ -10,7 +10,7 @@
         "solved": 41
       }
     ],
-    "last_updated": "2026-01-18 21:31 UTC+8",
+    "last_updated": "2026-01-18 22:21 UTC+8",
     "week_solved": 30,
     "week_breakdown": {
       "Easy": 1,
@@ -61,7 +61,7 @@
         "solved": 8
       }
     ],
-    "last_updated": "2026-01-18 21:31 UTC+8",
+    "last_updated": "2026-01-18 22:21 UTC+8",
     "week_solved": 6,
     "week_breakdown": {
       "Easy": 0,
@@ -88,7 +88,7 @@
         "solved": 20
       }
     ],
-    "last_updated": "2026-01-18 21:31 UTC+8",
+    "last_updated": "2026-01-18 22:21 UTC+8",
     "week_solved": 9,
     "week_breakdown": {
       "Easy": 0,
@@ -118,7 +118,7 @@
         "solved": 21
       }
     ],
-    "last_updated": "2026-01-18 21:31 UTC+8",
+    "last_updated": "2026-01-18 22:21 UTC+8",
     "week_solved": 20,
     "week_breakdown": {
       "Easy": 1,
@@ -168,14 +168,16 @@
       "275": "Medium",
       "2226": "Medium",
       "1475": "Easy",
-      "739": "Medium"
+      "739": "Medium",
+      "503": "Medium",
+      "496": "Easy"
     },
-    "current": 71,
-    "last_updated": "2026-01-18 21:31 UTC+8",
-    "week_solved": 11,
+    "current": 73,
+    "last_updated": "2026-01-18 22:21 UTC+8",
+    "week_solved": 13,
     "week_breakdown": {
-      "Easy": 2,
-      "Medium": 9,
+      "Easy": 3,
+      "Medium": 10,
       "Hard": 0
     }
   }
