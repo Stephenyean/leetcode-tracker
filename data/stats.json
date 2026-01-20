@@ -15,7 +15,7 @@
         "solved": 30
       }
     ],
-    "last_updated": "2026-01-20 19:47 UTC+8",
+    "last_updated": "2026-01-20 20:58 UTC+8",
     "week_solved": 1,
     "week_breakdown": {
       "Easy": 0,
@@ -42,7 +42,7 @@
         "solved": 6
       }
     ],
-    "last_updated": "2026-01-20 19:47 UTC+8",
+    "last_updated": "2026-01-20 20:58 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -53,7 +53,7 @@
   },
   "user9993g": {
     "baseline": 5,
-    "current": 679,
+    "current": 680,
     "week": 4,
     "history": [
       {
@@ -67,15 +67,16 @@
         "solved": 9
       }
     ],
-    "last_updated": "2026-01-20 19:47 UTC+8",
-    "week_solved": 1,
+    "last_updated": "2026-01-20 20:58 UTC+8",
+    "week_solved": 2,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 0,
+      "Medium": 1,
       "Hard": 1
     },
     "solved_problems": {
-      "1439": "Hard"
+      "1439": "Hard",
+      "767": "Medium"
     }
   },
   "scorego": {
@@ -94,7 +95,7 @@
         "solved": 20
       }
     ],
-    "last_updated": "2026-01-20 19:47 UTC+8",
+    "last_updated": "2026-01-20 20:58 UTC+8",
     "week_solved": 2,
     "week_breakdown": {
       "Easy": 2,
@@ -125,7 +126,7 @@
       "768": "Hard"
     },
     "current": 77,
-    "last_updated": "2026-01-20 19:47 UTC+8",
+    "last_updated": "2026-01-20 20:58 UTC+8",
     "week_solved": 2,
     "week_breakdown": {
       "Easy": 0,
