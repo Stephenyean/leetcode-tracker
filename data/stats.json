@@ -25,7 +25,7 @@
         "solved": 10
       }
     ],
-    "last_updated": "2026-02-03 01:41 UTC+8",
+    "last_updated": "2026-02-03 07:31 UTC+8",
     "week_solved": 1,
     "week_breakdown": {
       "Easy": 0,
@@ -52,7 +52,7 @@
         "solved": 6
       }
     ],
-    "last_updated": "2026-02-03 01:41 UTC+8",
+    "last_updated": "2026-02-03 07:31 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -82,7 +82,7 @@
         "solved": 4
       }
     ],
-    "last_updated": "2026-02-03 01:41 UTC+8",
+    "last_updated": "2026-02-03 07:31 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -93,7 +93,7 @@
   },
   "scorego": {
     "baseline": 218,
-    "current": 538,
+    "current": 539,
     "week": 6,
     "history": [
       {
@@ -117,14 +117,20 @@
         "solved": 10
       }
     ],
-    "last_updated": "2026-02-03 01:41 UTC+8",
-    "week_solved": 0,
+    "last_updated": "2026-02-03 07:31 UTC+8",
+    "week_solved": 5,
     "week_breakdown": {
-      "Easy": 0,
-      "Medium": 0,
+      "Easy": 4,
+      "Medium": 1,
       "Hard": 0
     },
-    "solved_problems": {}
+    "solved_problems": {
+      "113": "Medium",
+      "543": "Easy",
+      "110": "Easy",
+      "112": "Easy",
+      "104": "Easy"
+    }
   },
   "great-mirzakhani3ye": {
     "week": 6,
@@ -147,7 +153,7 @@
     ],
     "solved_problems": {},
     "current": 78,
-    "last_updated": "2026-02-03 01:41 UTC+8",
+    "last_updated": "2026-02-03 07:31 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
