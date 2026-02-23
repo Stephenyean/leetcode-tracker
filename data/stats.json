@@ -2,7 +2,7 @@
   "yyxxcc-n": {
     "baseline": 339,
     "current": 456,
-    "week": 8,
+    "week": 9,
     "history": [
       {
         "week": 2,
@@ -33,31 +33,26 @@
         "week": 7,
         "year": 2026,
         "solved": 15
+      },
+      {
+        "week": 8,
+        "year": 2026,
+        "solved": 9
       }
     ],
-    "last_updated": "2026-02-23 07:30 UTC+8",
-    "week_solved": 9,
+    "last_updated": "2026-02-23 10:33 UTC+8",
+    "week_solved": 0,
     "week_breakdown": {
-      "Easy": 1,
-      "Medium": 6,
-      "Hard": 2
+      "Easy": 0,
+      "Medium": 0,
+      "Hard": 0
     },
-    "solved_problems": {
-      "279": "Medium",
-      "1449": "Hard",
-      "2585": "Hard",
-      "1155": "Medium",
-      "1981": "Medium",
-      "583": "Medium",
-      "1143": "Medium",
-      "121": "Easy",
-      "72": "Medium"
-    }
+    "solved_problems": {}
   },
   "pdwang96": {
     "baseline": 555,
     "current": 561,
-    "week": 8,
+    "week": 9,
     "history": [
       {
         "week": 2,
@@ -70,7 +65,7 @@
         "solved": 6
       }
     ],
-    "last_updated": "2026-02-23 07:30 UTC+8",
+    "last_updated": "2026-02-23 10:33 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -82,7 +77,7 @@
   "user9993g": {
     "baseline": 5,
     "current": 682,
-    "week": 8,
+    "week": 9,
     "history": [
       {
         "week": 2,
@@ -100,7 +95,7 @@
         "solved": 4
       }
     ],
-    "last_updated": "2026-02-23 07:30 UTC+8",
+    "last_updated": "2026-02-23 10:33 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -112,7 +107,7 @@
   "scorego": {
     "baseline": 218,
     "current": 540,
-    "week": 8,
+    "week": 9,
     "history": [
       {
         "week": 2,
@@ -140,7 +135,7 @@
         "solved": 17
       }
     ],
-    "last_updated": "2026-02-23 07:30 UTC+8",
+    "last_updated": "2026-02-23 10:33 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -150,7 +145,7 @@
     "solved_problems": {}
   },
   "great-mirzakhani3ye": {
-    "week": 8,
+    "week": 9,
     "history": [
       {
         "week": 2,
@@ -170,7 +165,7 @@
     ],
     "solved_problems": {},
     "current": 78,
-    "last_updated": "2026-02-23 07:30 UTC+8",
+    "last_updated": "2026-02-23 10:33 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
