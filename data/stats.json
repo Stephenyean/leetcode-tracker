@@ -2,7 +2,7 @@
   "yyxxcc-n": {
     "baseline": 339,
     "current": 459,
-    "week": 9,
+    "week": 10,
     "history": [
       {
         "week": 2,
@@ -38,26 +38,26 @@
         "week": 8,
         "year": 2026,
         "solved": 9
+      },
+      {
+        "week": 9,
+        "year": 2026,
+        "solved": 4
       }
     ],
-    "last_updated": "2026-03-02 07:48 UTC+8",
-    "week_solved": 4,
+    "last_updated": "2026-03-02 10:28 UTC+8",
+    "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 3,
-      "Hard": 1
+      "Medium": 0,
+      "Hard": 0
     },
-    "solved_problems": {
-      "300": "Medium",
-      "334": "Medium",
-      "2826": "Medium",
-      "1964": "Hard"
-    }
+    "solved_problems": {}
   },
   "pdwang96": {
     "baseline": 555,
     "current": 561,
-    "week": 9,
+    "week": 10,
     "history": [
       {
         "week": 2,
@@ -70,7 +70,7 @@
         "solved": 6
       }
     ],
-    "last_updated": "2026-03-02 07:48 UTC+8",
+    "last_updated": "2026-03-02 10:28 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -82,7 +82,7 @@
   "user9993g": {
     "baseline": 5,
     "current": 682,
-    "week": 9,
+    "week": 10,
     "history": [
       {
         "week": 2,
@@ -100,7 +100,7 @@
         "solved": 4
       }
     ],
-    "last_updated": "2026-03-02 07:48 UTC+8",
+    "last_updated": "2026-03-02 10:28 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -112,7 +112,7 @@
   "scorego": {
     "baseline": 218,
     "current": 540,
-    "week": 9,
+    "week": 10,
     "history": [
       {
         "week": 2,
@@ -140,7 +140,7 @@
         "solved": 17
       }
     ],
-    "last_updated": "2026-03-02 07:48 UTC+8",
+    "last_updated": "2026-03-02 10:28 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -150,7 +150,7 @@
     "solved_problems": {}
   },
   "great-mirzakhani3ye": {
-    "week": 9,
+    "week": 10,
     "history": [
       {
         "week": 2,
@@ -170,7 +170,7 @@
     ],
     "solved_problems": {},
     "current": 78,
-    "last_updated": "2026-03-02 07:48 UTC+8",
+    "last_updated": "2026-03-02 10:28 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
