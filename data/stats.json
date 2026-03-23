@@ -2,7 +2,7 @@
   "yyxxcc-n": {
     "baseline": 339,
     "current": 459,
-    "week": 12,
+    "week": 13,
     "history": [
       {
         "week": 2,
@@ -45,7 +45,7 @@
         "solved": 4
       }
     ],
-    "last_updated": "2026-03-23 07:32 UTC+8",
+    "last_updated": "2026-03-23 10:36 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -57,7 +57,7 @@
   "pdwang96": {
     "baseline": 555,
     "current": 561,
-    "week": 12,
+    "week": 13,
     "history": [
       {
         "week": 2,
@@ -70,7 +70,7 @@
         "solved": 6
       }
     ],
-    "last_updated": "2026-03-23 07:32 UTC+8",
+    "last_updated": "2026-03-23 10:36 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -82,7 +82,7 @@
   "user9993g": {
     "baseline": 5,
     "current": 682,
-    "week": 12,
+    "week": 13,
     "history": [
       {
         "week": 2,
@@ -100,7 +100,7 @@
         "solved": 4
       }
     ],
-    "last_updated": "2026-03-23 07:32 UTC+8",
+    "last_updated": "2026-03-23 10:36 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -112,7 +112,7 @@
   "scorego": {
     "baseline": 218,
     "current": 541,
-    "week": 12,
+    "week": 13,
     "history": [
       {
         "week": 2,
@@ -145,7 +145,7 @@
         "solved": 1
       }
     ],
-    "last_updated": "2026-03-23 07:32 UTC+8",
+    "last_updated": "2026-03-23 10:36 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -155,7 +155,7 @@
     "solved_problems": {}
   },
   "great-mirzakhani3ye": {
-    "week": 12,
+    "week": 13,
     "history": [
       {
         "week": 2,
@@ -176,28 +176,20 @@
         "week": 11,
         "year": 2026,
         "solved": 1
+      },
+      {
+        "week": 12,
+        "year": 2026,
+        "solved": 12
       }
     ],
-    "solved_problems": {
-      "1": "Easy",
-      "121": "Easy",
-      "2441": "Easy",
-      "2001": "Medium",
-      "\u9762\u8bd5\u9898 16.24": "Medium",
-      "1679": "Medium",
-      "2342": "Medium",
-      "2016": "Easy",
-      "3623": "Medium",
-      "3805": "Medium",
-      "2364": "Medium",
-      "3371": "Medium"
-    },
+    "solved_problems": {},
     "current": 90,
-    "last_updated": "2026-03-23 07:32 UTC+8",
-    "week_solved": 12,
+    "last_updated": "2026-03-23 10:36 UTC+8",
+    "week_solved": 0,
     "week_breakdown": {
-      "Easy": 4,
-      "Medium": 8,
+      "Easy": 0,
+      "Medium": 0,
       "Hard": 0
     }
   }
