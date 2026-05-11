@@ -2,7 +2,7 @@
   "yyxxcc-n": {
     "baseline": 339,
     "current": 459,
-    "week": 19,
+    "week": 20,
     "history": [
       {
         "week": 2,
@@ -45,7 +45,7 @@
         "solved": 4
       }
     ],
-    "last_updated": "2026-05-11 07:59 UTC+8",
+    "last_updated": "2026-05-11 12:17 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -57,7 +57,7 @@
   "pdwang96": {
     "baseline": 555,
     "current": 561,
-    "week": 19,
+    "week": 20,
     "history": [
       {
         "week": 2,
@@ -70,7 +70,7 @@
         "solved": 6
       }
     ],
-    "last_updated": "2026-05-11 07:59 UTC+8",
+    "last_updated": "2026-05-11 12:17 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -82,7 +82,7 @@
   "user9993g": {
     "baseline": 5,
     "current": 682,
-    "week": 19,
+    "week": 20,
     "history": [
       {
         "week": 2,
@@ -100,7 +100,7 @@
         "solved": 4
       }
     ],
-    "last_updated": "2026-05-11 07:59 UTC+8",
+    "last_updated": "2026-05-11 12:17 UTC+8",
     "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
@@ -112,7 +112,7 @@
   "scorego": {
     "baseline": 218,
     "current": 542,
-    "week": 19,
+    "week": 20,
     "history": [
       {
         "week": 2,
@@ -143,21 +143,24 @@
         "week": 11,
         "year": 2026,
         "solved": 1
+      },
+      {
+        "week": 19,
+        "year": 2026,
+        "solved": 1
       }
     ],
-    "last_updated": "2026-05-11 07:59 UTC+8",
-    "week_solved": 1,
+    "last_updated": "2026-05-11 12:17 UTC+8",
+    "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
       "Medium": 0,
-      "Hard": 1
+      "Hard": 0
     },
-    "solved_problems": {
-      "295": "Hard"
-    }
+    "solved_problems": {}
   },
   "great-mirzakhani3ye": {
-    "week": 19,
+    "week": 20,
     "history": [
       {
         "week": 2,
@@ -188,19 +191,20 @@
         "week": 13,
         "year": 2026,
         "solved": 4
+      },
+      {
+        "week": 19,
+        "year": 2026,
+        "solved": 3
       }
     ],
-    "solved_problems": {
-      "1456": "Medium",
-      "3": "Medium",
-      "34": "Medium"
-    },
+    "solved_problems": {},
     "current": 94,
-    "last_updated": "2026-05-11 07:59 UTC+8",
-    "week_solved": 3,
+    "last_updated": "2026-05-11 12:17 UTC+8",
+    "week_solved": 0,
     "week_breakdown": {
       "Easy": 0,
-      "Medium": 3,
+      "Medium": 0,
       "Hard": 0
     }
   }
